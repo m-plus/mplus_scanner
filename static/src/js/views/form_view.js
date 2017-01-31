@@ -10,9 +10,11 @@ var _t = core._t;
 FormView.include({
     render_sidebar: function($node) {
         this._super.apply(this, arguments);
-        this.sidebar.add_items('other', [
-            { label: _t('Scan document'), callback: this.on_button_scan_document },
-        ]);
+        if (!this.sidebar && this.options.sidebar) {
+            this.sidebar.add_items('other', [
+                { label: _t('Scan document'), callback: this.on_button_scan_document },
+            ]);
+        }
     },
     on_button_scan_document: function() {
         var self = this;
