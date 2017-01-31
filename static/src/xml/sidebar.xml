@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="mplusSidebarTemplate" xml:space="preserve">
+
+<t t-extend="Sidebar">
+    <t t-jquery="ul.dropdown-menu" t-operation="append">
+        <li t-if="section.name == 'files' and widget.options.editable" class="oe_sidebar_add_scan_attachment">
+            <a class="oe_file_attachment file_scan">
+                Add file scanned...
+            </a>
+        </li>
+    </t>
+</t>
+
+</templates>

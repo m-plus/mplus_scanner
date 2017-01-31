@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="mplus_scanner_view_users_form" model="ir.ui.view">
+            <field name="name">mplus.scanner.res.users.form</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page name="mplus_scanner" string="Scanner">
+                        <group>
+                            <field name="scanner_path"/>
+                            <field name="source_scan_document"/>
+                            <field name="dest_scan_document"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>
