@@ -17,5 +17,20 @@
                 </xpath>
             </field>
         </record>
+
+        <record id="mplus_scanner__view_users_form_simple_modif" model="ir.ui.view">
+            <field name="name">mplus.scanner.res.users.form.simple</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form_simple_modif" />
+            <field name="arch" type="xml">
+                <footer position="before">
+                    <group string="Scanner" name="scanner">
+                        <field name="scanner_path"/>
+                        <field name="source_scan_document"/>
+                        <field name="dest_scan_document"/>
+                    </group>
+                </footer>
+            </field>
+        </record>
     </data>
 </openerp>
